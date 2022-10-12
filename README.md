@@ -5,6 +5,6 @@
 </p>
 
 <h3>Design Abaixo:</h3>
-<img src="./Assets/imgdesign.jpg" alt='design'/>
+<img src="src/Assets/imgdesign.jpg" />
 
 <h3>Link Site: <strong>https://onu-csl.netlify.app/</strong></h3>

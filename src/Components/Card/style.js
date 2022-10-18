@@ -72,7 +72,7 @@ export const ModalBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     position: fixed;
     transform: ${({ open }) => (open ? 'scale(1)' : 'scale(0)')};
     transition: transform 0.3s ease-in-out;
@@ -84,15 +84,16 @@ export const ModalBox = styled.div`
         width: 100%;
         max-height: 400px;
         padding: 0.2rem;
-        object-fit: contain;
-        outline: 1px solid var(--bg-light);
+        border-radius: 25px;
+        object-fit: cover;
+        outline: 5px solid var(--bg-dark);
     }
 
     h2{
         font-size: clamp(2rem, 3vw, 3.5rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-700);
-        color: var(--clr-light);
+        color: var(--clr-dark);
     }
 
     p{
@@ -100,25 +101,26 @@ export const ModalBox = styled.div`
         font-size: clamp(1rem, 1.2vw, 1.5rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-400);
-        color: var(--clr-light);
+        color: var(--clr-dark);
         text-align: center;
     }
 
     button{
         padding: 0.5em 1em;
-        border-radius: 10px;
+        border-radius: 25px;
         font-size: clamp(1rem, 1.2vw, 1.4rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-700);
-        color: var(--clr-dark);
+        background-color: var(--bg-dark);
+        color: var(--clr-light);
         cursor: pointer;
         border: none;
     }
 
     button:hover{
-        background-color: var(--bg-dark);
-        color: var(--clr-light);
-        outline: 2px solid var(--bg-light);
+        background-color: var(--bg-light);
+        color: var(--clr-dark);
+        outline: 2px solid var(--bg-dark);
     }
 
     @media screen and (max-width:48em){

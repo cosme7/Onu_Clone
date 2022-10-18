@@ -9,7 +9,7 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: clamp(1rem, 2vw, 2.5rem);
+    row-gap: clamp(1rem, 2vw, 2.2rem);
     background-color: var(--bg-light);
 
     h1{
@@ -27,16 +27,15 @@ export const Container = styled.section`
         margin: 0 auto;
         padding: 1rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: clamp(1rem, 2vw, 2.5rem);
     }
 
     @media screen and (max-width:48em){
 
         div{
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
         }
     }
 `;

@@ -2,24 +2,26 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     width: 250px;
-    padding: 1rem 0.5rem;
+    min-height: 20vh;
+    padding: 0.5rem 0.5rem 1rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border: none;
     cursor: pointer;
 
-    h4{
+    p{
         margin-right: 1rem;
         font-family: var(--ff-one);
         font-size: clamp(1.5rem, 1.5vw, 2rem);
+        font-weight: var(--fw-700);
         color: var(--clr-light);
         text-align: center;
     }
 
-    h4::before{
+    p::before{
         counter-increment: x;
         content:  " " counter(x) " " ;
         font-size: clamp(3rem, 3vw, 3.7rem);    
@@ -28,7 +30,7 @@ export const Button = styled.button`
     }
 
     img{
-        width: 90px;
+        width: 80px;
         aspect-ratio: 1;
     }
 
@@ -49,25 +51,41 @@ export const Button = styled.button`
     }
 `;
 
+export const Overlay = styled.div`
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    position: fixed;
+    top: 50%;
+    z-index: 1000;
+    transform: ${({open}) => (open ? 'scale(1000)' : 'scale(0)')};
+    transition: transform 0.4s ease-in-out;
+    background-image: linear-gradient( rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.5) );
+`;
+
 export const ModalBox = styled.div`
-    padding: 1rem;
+    width: 45%;
+    min-height: 30vh;
+    padding: 1rem 0.5rem;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 1rem;
     background-color: var(--bg-dark);
-
-    button{
-        padding: 0.5em 1em;
-        border-radius: 10px;
-        font-size: clamp(1rem, 1.2vw, 1.4rem);
-        font-family: var(--ff-one);
-        font-weight: var(--fw-700);
-        cursor: pointer;
-    }
+    position: fixed;
+    transform: ${({ open }) => (open ? 'scale(1)' : 'scale(0)')};
+    transition: transform 0.3s ease-in-out;
+    top: 5%;
+    z-index: 2000;
+    isolation: isolate;
 
     img{
         width: 100%;
+        max-height: 400px;
+        padding: 0.2rem;
+        object-fit: contain;
+        outline: 1px solid var(--bg-light);
     }
 
     h2{
@@ -79,14 +97,32 @@ export const ModalBox = styled.div`
 
     p{
         max-width: 55ch;
-        font-size: clamp(1rem, 1.5vw, 3.5rem);
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-400);
         color: var(--clr-light);
         text-align: center;
     }
 
-    @media screen and (max-width:38em){
-        padding: 1rem 0.5rem;
+    button{
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        font-size: clamp(1rem, 1.2vw, 1.4rem);
+        font-family: var(--ff-one);
+        font-weight: var(--fw-700);
+        color: var(--clr-dark);
+        cursor: pointer;
+        border: none;
+    }
+
+    button:hover{
+        background-color: var(--bg-dark);
+        color: var(--clr-light);
+        outline: 2px solid var(--bg-light);
+    }
+
+    @media screen and (max-width:48em){
+        width: 100%;
     }
 `;
+

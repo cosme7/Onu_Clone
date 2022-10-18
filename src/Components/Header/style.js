@@ -35,6 +35,7 @@ export const Nav = styled.nav`
         padding: 1rem;
         text-decoration: none;
         transition: outline 0.2s ease-in-out;
+        color: var(--clr-dark);
     }
 
     a:where(:hover, :focus){

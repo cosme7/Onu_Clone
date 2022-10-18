@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
     max-width: 1920px;
     margin: 0 auto;
-    padding: 2.15rem 2rem;
+    padding: 1rem 2rem 0.5rem;
     border-top: 1px solid navy;
     display: flex;
     justify-content: space-between;

@@ -1,13 +1,8 @@
 import React from 'react';
-import Health from '../../Components/Card/Health'
-import Transport from '../../Components/Card/Transport'
-import Safety from '../../Components/Card/Safety'
-import Water from '../../Components/Card/Water'
-import Trash from '../../Components/Card/Trash'
+import Card from '../../Components/Card/index'
 import * as S from './style';
 
-
-export default function index(){
+export default function Home(){
     return (
         <>
         <main>
@@ -25,11 +20,12 @@ export default function index(){
                 atingir a Agenda 2030 no Brasil.
                 </S.HomeTxt>
                 <div aria-label='card-content'>
-                    <Transport />
+                    {/* <Transport />
                     <Health />
-                    <Safety />
+                    <Safety />}
                     <Water />
-                    <Trash />
+                    { <Trash /> */}
+                    <Card />
                 </div>
             </S.Container>
         </main>

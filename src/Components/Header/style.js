@@ -8,6 +8,7 @@ export const Container = styled.section`
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-accent);
+    position: relative;
 
     img{
         width: 50px;
@@ -22,49 +23,84 @@ export const Container = styled.section`
     }
 `;
 
+export const Skip = styled.a`
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-family: var(--ff-one);
+    font-weight: var(--fw-400);
+    color: var(--clr-light);
+    background-color: navy;
+    position: absolute;
+    left: 2rem;
+    bottom: -2rem;
+    text-decoration: none;
+    transform: translateY(-600%);
+    transition: transform 0.3s ease-in-out;
+    outline: none;
+
+    :focus-visible{
+        font-weight: var(--fw-700);
+        background-color: blueviolet;
+        color: var(--clr-light);
+        transform: translateY(0);
+    }
+`;
+
 export const Nav = styled.nav`
 
     ul{
         display: flex;
         align-items: center;
-        gap: clamp(0.5rem, 1.2vw, 1.5rem);
+        gap: clamp(0.5rem, 4vw, 5rem);
         list-style: none;
     }
 
     a{
-        padding: 1rem;
-        text-decoration: none;
-        transition: outline 0.2s ease-in-out;
         color: var(--clr-dark);
-    }
-
-    a:where(:hover, :focus){
-        outline: 5px solid navy;
-    }
-
-    a:where(:hover, :focus) li{
-        color: #e5243b;
+        text-decoration: none;
+        outline: none;
     }
 
     li{
-        margin-right: 0.5rem;
-        font-size: clamp(0.75rem, 1.2vw, 1.5rem);
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-400);
         letter-spacing: 1px;
         text-transform: uppercase;
+        position: relative;
+    }
+
+    li::after{
+        content: '';
+        width: 70%;
+        border: 2px solid var(--bg-navy);
+        display: block;
+        position: absolute;
+        left: 15%;
+        bottom: -.3em;
+        transform-origin: center;
+        transition: transform 0.2s ease-in-out;
+        transform: scaleX(0);
+    }
+
+    li:where(:hover, :focus-within)::after{
+        transform: scaleX(1);
+    }
+
+    li:where(:hover, :focus){
+        color: red;
     }
 
     @media screen and (max-width:38em){
         width: 100%;
 
         a{
-            padding: 0.5rem;
+            padding: 0;
         }
 
         ul{
             justify-content: space-between;
-            gap: 0;
         }
     }
 `;

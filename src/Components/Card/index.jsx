@@ -22,7 +22,7 @@ export default function Card() {
             <>
             <S.Button key={id} open={open} onClick={() => {selectModal(item);toggleModal()}}>
                 <p>{item.name}</p>
-                <img src={item.btn} alt={item.name} title={item.name} />
+                <img src={item.btn} alt={item.alt} title={item.name} />
             </S.Button> 
             </>
         ))}
@@ -30,7 +30,7 @@ export default function Card() {
         <S.Overlay open={open} onClick={() => {toggleModal(false)}}></S.Overlay>
 
         {modalContent.map((item, id) => (
-        <S.ModalBox open={open}>
+        <S.ModalBox open={open} aria-modal='true' aria-labelledby={item.title}>
             <>
                 <img src={item.img} alt={item.title} title={item.title}/>
                 <h2 key={id}>{item.title}</h2>

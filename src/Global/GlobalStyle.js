@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
         --bg-light: #ffffff;
         --bg-accent: #f9f9f9;
         --bg-dark: #000000;
+        --bg-navy: navy;
         /*  */
     }
 

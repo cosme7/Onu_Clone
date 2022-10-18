@@ -10,11 +10,11 @@ export const Container = styled.section`
     align-items: center;
     background-color: var(--bg-light);  
     
-    h2{
+    p{
         max-width: 40ch;
         font-size: clamp(1rem, 1.2vw, 1.5rem);
         font-family: var(--ff-one);
-        font-weight: var(--fw-400);
+        font-weight: var(--fw-700);
         letter-spacing: 2px;
         color: var(--clr-dark);
         text-align: center;

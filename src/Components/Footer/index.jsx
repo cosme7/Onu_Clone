@@ -9,7 +9,7 @@ export default function Footer(){
         <>
          <footer>
             <S.Container>
-                <h2>Obrigado pela a visita!</h2>
+                <p>Obrigado pela visita!</p>
                 <S.Social aria-label='social-navigation'>
                     <a href="https://www.linkedin.com/in/cosme-da-silva-leite-08baa3219/" target="_blank" rel="noreferrer">
                         <img src={Linkedin} alt="LinkeDin" title="LinkeDin" />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     width: 250px;
-    min-height: 20vh;
+    height: 200px;
     padding: 0.5rem 0.5rem 1rem;
     border-radius: 5px;
     display: flex;
@@ -11,6 +11,10 @@ export const Button = styled.button`
     align-items: center;
     border: none;
     cursor: pointer;
+
+    :focus{
+        outline: 2px solid var(--bg-navy);
+    }
 
     p{
         margin-right: 1rem;
@@ -63,7 +67,7 @@ export const Overlay = styled.div`
     background-image: linear-gradient( rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.5) );
 `;
 
-export const ModalBox = styled.div`
+export const ModalBox = styled.dialog`
     width: 45%;
     min-height: 30vh;
     padding: 1rem 0.5rem;
@@ -72,13 +76,14 @@ export const ModalBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    row-gap: 1.5rem;
     background-color: var(--bg-light);
     position: fixed;
     transform: ${({ open }) => (open ? 'scale(1)' : 'scale(0)')};
     transition: transform 0.3s ease-in-out;
     top: 5%;
+    left: 25%;
     z-index: 2000;
-    isolation: isolate;
 
     img{
         width: 100%;
@@ -86,7 +91,7 @@ export const ModalBox = styled.div`
         padding: 0.2rem;
         border-radius: 25px;
         object-fit: cover;
-        outline: 5px solid var(--bg-dark);
+        outline: 1px solid var(--bg-dark);
     }
 
     h2{
@@ -124,7 +129,8 @@ export const ModalBox = styled.div`
     }
 
     @media screen and (max-width:48em){
-        width: 100%;
+        width: 95%;
+        left: 2%;
     }
 `;
 

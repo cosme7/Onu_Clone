@@ -1,5 +1,5 @@
 import Transport from '../Assets/card_01.svg'
-import Busão from '../Assets/card_01.png'
+import Busão from '../Assets/card_01.jpg'
 import Health from '../Assets/card_02.svg'
 import Cuidados from '../Assets/card_02.jpg'
 import Education from '../Assets/card_03.svg'
@@ -14,6 +14,7 @@ const info = [
         id: 1,
         btn: Transport,
         name: 'Transporte',
+        alt: 'Ônibus',
         img: Busão,
         title: 'Transporte',
         txt: 'Solicitar a Prefeitura do Estado maior contingente de ônibus, de preferência com cãmeras, pois assim, inibe a violência e os usuários se sentirão mais seguros, e criar meios de conscientização para  manter o transporte limpo e em bom estado.'
@@ -22,6 +23,7 @@ const info = [
         id: 2,
         btn: Health,
         name: 'Saúde',
+        alt: 'Coração',
         img: Cuidados,
         title: 'Saúde',
         txt: 'Solicitar à Prefeitura do Estado mais médicos para o Bairro, ter um estoque mais consistente de remédios, além de reformar as praças colocando equipamentos de exercícios para os idosos.'
@@ -29,6 +31,7 @@ const info = [
     {
         id: 3,
         btn: Education,
+        alt: 'Livros',
         name: 'Educação',
         img: Study,
         title: 'Educação',
@@ -37,6 +40,7 @@ const info = [
     {
         id: 4,
         btn: Water,
+        alt: 'Gota de água',
         name: 'Saneamento',
         img: Suja,
         title: 'Saneamento',
@@ -45,6 +49,7 @@ const info = [
     {
         id: 5,
         btn: Trash,
+        alt: 'Símbolo Reciclagem',
         name: 'Reciclagem',
         img: Lixão,
         title: 'Reciclagem',

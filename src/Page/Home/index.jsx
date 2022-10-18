@@ -6,7 +6,7 @@ export default function Home(){
     return (
         <>
         <main>
-            <S.Container>
+            <S.Container id='main-content'>
                 <h1>Os Objetivos de Desenvolvimento Sustentável na Vila Kennedy</h1>
                 <S.HomeTxt>
                 Os Objetivos de Desenvolvimento Sustentável são um apelo 
@@ -19,12 +19,7 @@ export default function Home(){
                 contribuindo a fim de que possamos 
                 atingir a Agenda 2030 no Brasil.
                 </S.HomeTxt>
-                <div aria-label='card-content'>
-                    {/* <Transport />
-                    <Health />
-                    <Safety />}
-                    <Water />
-                    { <Trash /> */}
+                <div>
                     <Card />
                 </div>
             </S.Container>

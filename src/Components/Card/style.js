@@ -108,6 +108,8 @@ export const ModalBox = styled.dialog`
         font-weight: var(--fw-400);
         color: var(--clr-dark);
         text-align: center;
+        word-break: break-all;
+        hyphens: auto;
     }
 
     button{
@@ -129,8 +131,8 @@ export const ModalBox = styled.dialog`
     }
 
     @media screen and (max-width:48em){
-        width: 95%;
-        left: 2%;
+        width: 98%;
+        left: 1%;
     }
 `;
 

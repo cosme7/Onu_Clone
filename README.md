@@ -29,3 +29,5 @@
 <h3>Link para o Site: <strong>https://onu-csl.netlify.app/</strong></h3>
 
 <a href="https://www.linkedin.com/in/cosme-da-silva-leite-08baa3219/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
+<p>PS: Fiz uma boa pesquisa pensando em Acessibilidade (ARIA), pensando nas ferramentas usadas para leitura de tela, espero que tenha dado frutos :star_struck:.</p>

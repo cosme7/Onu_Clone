@@ -130,6 +130,7 @@ export const ModalBox = styled.dialog`
     @media screen and (max-width:48em){
         width: 95%;
         padding: 0.5rem;
+        top: 2%;
         left: 2%;
     }
 `;

@@ -74,9 +74,8 @@ export const ModalBox = styled.dialog`
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    row-gap: 1.5rem;
+    row-gap: clamp(0.7rem, 1.2vw, 2rem);
     background-color: var(--bg-light);
     position: fixed;
     transform: ${({ open }) => (open ? 'scale(1)' : 'scale(0)')};
@@ -102,14 +101,12 @@ export const ModalBox = styled.dialog`
     }
 
     p{
-        max-width: 55ch;
+        max-width: 60ch;
         font-size: clamp(1rem, 1.2vw, 1.5rem);
         font-family: var(--ff-one);
         font-weight: var(--fw-400);
         color: var(--clr-dark);
         text-align: center;
-        word-break: break-all;
-        hyphens: auto;
     }
 
     button{
@@ -131,8 +128,9 @@ export const ModalBox = styled.dialog`
     }
 
     @media screen and (max-width:48em){
-        width: 98%;
-        left: 1%;
+        width: 95%;
+        padding: 0.5rem;
+        left: 2%;
     }
 `;
 

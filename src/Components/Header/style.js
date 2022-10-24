@@ -13,6 +13,7 @@ export const Container = styled.section`
     img{
         width: 50px;
         aspect-ratio: 1;
+        filter: contrast(150%) brightness(150%);
     }
 
     @media screen and (max-width:38em){
@@ -28,9 +29,9 @@ export const Skip = styled.a`
     border-radius: 5px;
     font-size: clamp(1rem, 1vw, 1.5rem);
     font-family: var(--ff-one);
-    font-weight: var(--fw-400);
+    font-weight: var(--fw-700);
     color: var(--clr-light);
-    background-color: navy;
+    background-color: var(--bg-navy);
     position: absolute;
     left: 2rem;
     bottom: -2rem;
@@ -40,9 +41,6 @@ export const Skip = styled.a`
     outline: none;
 
     :focus-visible{
-        font-weight: var(--fw-700);
-        background-color: blueviolet;
-        color: var(--clr-light);
         transform: translateY(0);
     }
 `;
@@ -78,7 +76,7 @@ export const Nav = styled.nav`
         display: block;
         position: absolute;
         left: 15%;
-        bottom: -.3em;
+        bottom: -.35em;
         transform-origin: center;
         transition: transform 0.2s ease-in-out;
         transform: scaleX(0);
@@ -88,7 +86,7 @@ export const Nav = styled.nav`
         transform: scaleX(1);
     }
 
-    li:where(:hover, :focus){
+    a:where(:hover, :focus){
         color: red;
     }
 

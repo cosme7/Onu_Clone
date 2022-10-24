@@ -36,6 +36,7 @@ export const Button = styled.button`
     img{
         width: 80px;
         aspect-ratio: 1;
+        filter: var(--img);
     }
 
     :nth-child(1){
@@ -64,11 +65,11 @@ export const Overlay = styled.div`
     z-index: 1000;
     transform: ${({open}) => (open ? 'scale(1000)' : 'scale(0)')};
     transition: transform 0.4s ease-in-out;
-    background-image: linear-gradient( rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.5) );
+    background-image: linear-gradient( rgb(0, 0, 0, 0), var(--overlay));
 `;
 
 export const ModalBox = styled.dialog`
-    width: 45%;
+    width: 50%;
     min-height: 30vh;
     padding: 1rem 0.5rem;
     border-radius: 25px;
@@ -76,12 +77,12 @@ export const ModalBox = styled.dialog`
     flex-direction: column;
     align-items: center;
     row-gap: clamp(0.7rem, 1.2vw, 2rem);
-    background-color: var(--bg-light);
+    background-color: var(--bg-accent);
     position: fixed;
     transform: ${({ open }) => (open ? 'scale(1)' : 'scale(0)')};
     transition: transform 0.3s ease-in-out;
     top: 5%;
-    left: 25%;
+    left: 24%;
     z-index: 2000;
 
     img{
@@ -130,7 +131,7 @@ export const ModalBox = styled.dialog`
     @media screen and (max-width:48em){
         width: 95%;
         padding: 0.5rem;
-        top: 2%;
+        top: 1%;
         left: 2%;
     }
 `;

@@ -19,14 +19,27 @@ export const GlobalStyle = createGlobalStyle`
         --fw-700: 700;
         --fw-400: 400;
         /*  */
-        --clr-light: #FFFFFF;
-        --clr-dark: #FFFFF;
+        --clr-light: ${(props) => props.theme.clrLight};
+        --clr-dark: ${(props) => props.theme.clrDark};
         /*  */
-        --bg-light: #ffffff;
-        --bg-accent: #f9f9f9;
-        --bg-dark: #000000;
-        --bg-navy: navy;
+        --bg-light: ${(props) => props.theme.bgLight};
+        --bg-accent: ${(props) => props.theme.accent};
+        --bg-dark: ${(props) => props.theme.bgDark};
+        --bg-navy: ${(props) => props.theme.bgNavy};
         /*  */
+        --opSun: ${(props) => props.theme.opSun};
+        --opMoon: ${(props) => props.theme.opMoon};
+        /*  */
+        --overlay: ${(props) => props.theme.overlay};
+        --img: ${(props) => props.theme.imgClr};
+    }
+
+    * > * {
+        transition: background-color 0.3s linear;
+    }
+
+    * + * {
+        transition: color 0.3s linear;
     }
 
     body {

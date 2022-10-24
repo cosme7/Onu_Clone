@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     max-width: 1920px;
-    min-height: 80vh;
+    min-height: 82.2vh;
     margin: 0 auto;
     padding: 1rem 0.5rem;
     display: flex;

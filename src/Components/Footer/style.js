@@ -4,7 +4,7 @@ export const Container = styled.section`
     max-width: 1920px;
     margin: 0 auto;
     padding: 1rem 2rem 0.5rem;
-    border-top: 1px solid navy;
+    border-top: 1px solid var(--bg-navy);
     display: flex;
     justify-content: space-between;
     align-items: center;
